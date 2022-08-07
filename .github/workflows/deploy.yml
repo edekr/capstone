@@ -28,6 +28,10 @@ jobs:
         run: |
           cd infrastructure
           sh setup_terraform_state_bucket.sh
+      - name: Build Source Code
+        run: |
+          cd src
+          sh build_source_code.sh
       # Runs a set of commands using the runners shell
       - name: Deploy with Terraform
         run: |
