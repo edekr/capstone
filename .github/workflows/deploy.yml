@@ -28,6 +28,7 @@ jobs:
         run: |
           cd infrastructure
           sh setup_terraform_state_bucket.sh
+          sh setup_image_upload_bucket.sh
       - name: Build Source Code
         run: |
           cd src
